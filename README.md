@@ -17,7 +17,7 @@ How to
 2. Perpare the necessary input(YUV rawdata)
     >ffmpeg -i <input_compressed_clip> -s sqcif -pix_fmt yuv420p angel.yuv
 
-    For you convinent, I already upload a yuv pic with 16 sqcif frames.
+    For a convenient, I already upload a yuv pic with 16 sqcif frames.
 
 3. Run it
     >hello264 < angel.yuv > angel.264
