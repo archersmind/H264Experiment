@@ -24,25 +24,22 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(int argc, char *argv[]) {
 
-    // Original Width& height
-    int ori_width, ori_height;
-
-    // Alignment
-    int width_alignment, height_alignment;
-    
     // Aligned Width&height
     int aligned_width, aligned_height;
 
-    printf ("Please input the parameters as: ori_width ori_height width_alignment height_alignment \n");
-    scanf("%d%d%d%d", &ori_width, &ori_height, &width_alignment, &height_alignment);
+    if (argc < 5) {
+        printf("Invaild Input!!!\n");
+        printf("Input should be:\n");
+        printf("<width> <height> <width_alignment> <height_alignment>\n");
+        return 0;
+    }
 
-    aligned_height = (ori_height + (height_alignment - 1)) & (~(height_alignment - 1));
-    aligned_width = (ori_width + (width_alignment - 1)) & (~(width_alignment - 1));
+    aligned_width = (atoi(argv[1]) + (atoi(argv[3]) - 1)) & (~(atoi(argv[3]) - 1));
+    aligned_height = (atoi(argv[2]) + (atoi(argv[4]) - 1)) & (~(atoi(argv[4]) - 1));
 
     printf("aligned_width = %d aligned_height = %d \n", aligned_width, aligned_height);
 
     return 0;
-
 }
