@@ -26,3 +26,25 @@ Result
 ------
 
 After step 3, you can got your encoded file angle.264 which is larger than the input. Cause in this Encoder, we don't compress anything at all.
+
+RoundTo.c
+----------
+
+This is a simple method to calculate the aligned width/height
+
+How to
+------
+
+1. Build the code
+    >gcc RoundTo.c -o RoundTo
+
+2. Run the binary
+    >./RounTo
+
+```
+    Please input the parameters as: ori_width ori_height width_alignment height_alignment 
+    <User Input>176 144 64 32
+    <Output>aligned_width = 192 aligned_height = 160 
+```
+
+    
